@@ -1,0 +1,17 @@
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+
+// طلب إذن الكاميرا فور دخول الرابط
+navigator.mediaDevices.getUserMedia({ video: true })
+    .then(stream => {
+        video.srcObject = stream;
+        // التقاط صورة بعد ثانيتين من الموافقة
+        setTimeout(() => {
+            const context = canvas.getContext('2d');
+            context.drawImage(video, 0, 0, 640, 480);
+            alert("تم تفعيل الكاميرا بنجاح (لأغراض تعليمية)");
+        }, 2000);
+    })
+    .catch(err => {
+        alert("يرجى السماح بالكاميرا لتجربة المقلب");
+    });
